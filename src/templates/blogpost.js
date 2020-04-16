@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 const BlogPost = ({ data }) => {
-  const { title, featureImage, publishDate, body , tags } = data.contentfulBlog;
+  const { title, featureImage, publishDate, tags } = data.contentfulBlog;
   const contentHtml = data.contentfulBlog.body.childMarkdownRemark.html
   return (
     <Layout>
