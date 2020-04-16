@@ -47,9 +47,11 @@ exports.createPages = ({ graphql, actions }) => {
 
     // 利用するテンプレートファイルを指定
     const blogPostTemplate = path.resolve("./src/templates/blogpost.js");
+
+    // GraphQLのデータを使ってページを追加する処理
     result.data.allContentfulBlog.edges.forEach(edge => {
       createPage({
-        path: `/blogpost/${edge.node.slug}`,
+        path: `/blog/${edge.node.slug}`,
         component: slash(blogPostTemplate),
         context: {
           slug: edge.node.slug,

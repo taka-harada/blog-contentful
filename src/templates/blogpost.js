@@ -2,9 +2,10 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+
 const BlogPost = ({ data }) => {
-  const { title, featureImage, publishDate, body , tags } = data.contentfulBlog;
-  const contentHtml = data.contentfulBlog.body.childMarkdownRemark.html
+  const { title, featureImage, publishDate, tags, body } = data.contentfulBlog;
+  //const contentHtml = data.contentfulBlog.body.childMarkdownRemark.html
   return (
     <Layout>
       <SEO title={title} />
@@ -18,8 +19,8 @@ const BlogPost = ({ data }) => {
               {tag}
             </li>
           ))}
-        </div>        
-        <div dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
+        </div>
+        <div dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.html }}></div>
         <Link to="/">Back to Home</Link>
       </div>
     </Layout>
