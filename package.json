@@ -27,9 +27,13 @@
     "@storybook/addon-viewport": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
+    "@types/styled-components": "^5.1.0",
     "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "gatsby-plugin-styled-components": "^3.3.0",
     "prettier": "^1.19.1",
     "storybook-addon-designs": "^5.2.0",
+    "styled-components": "^5.1.0",
     "webpack": "^4.42.1"
   },
   "keywords": [
