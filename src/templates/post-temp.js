@@ -1,17 +1,15 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 
-import Background from "../components/atoms/_layout/Background"
-import Header from "../components/molecules/Header"
-import Centered from "../components/atoms/_layout/Centered"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const BlogPost = ({ data }) => {
   const { title, featureImage, publishDate, tags, body } = data.contentfulBlog;
   //const contentHtml = data.contentfulBlog.body.childMarkdownRemark.html
   return (
-    <Background>
-      <Header />
-      <Centered />
+    <Layout>
+      <SEO title={title} />
       <div className="blogpost">
         <h1>{title}</h1>
         <p>{publishDate}</p>
@@ -26,7 +24,7 @@ const BlogPost = ({ data }) => {
         <div dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.html }}></div>
         <Link to="/">Back to Home</Link>
       </div>
-    </Background>
+    </Layout>
   );
 };
 export default BlogPost;
