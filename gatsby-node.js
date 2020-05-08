@@ -46,7 +46,7 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // 利用するテンプレートファイルを指定
-    const blogPostTemplate = path.resolve("./src/templates/blogpost.js");
+    const blogPostTemplate = path.resolve("./src/templates/post-temp.js");
 
     // GraphQLのデータを使ってページを追加する処理
     result.data.allContentfulBlog.edges.forEach(edge => {
