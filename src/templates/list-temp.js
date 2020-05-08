@@ -4,6 +4,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import Background from "../components/atoms/_layout/Background"
 import Header from "../components/molecules/Header"
 import Centered from "../components/atoms/_layout/Centered"
+import Layout from "../components/layout"
 
 const ListTemplate = () => {
   // graphql経由でValueを取得して、自動的にdataに渡す
@@ -36,10 +37,8 @@ const ListTemplate = () => {
   console.log(data)
 
   return (
-    <Background>
-      <Header siteTitle="demo" />
-      <Centered />
-      <h1>Blog Archive</h1>
+    <Layout>
+      <h1>Blog Archives</h1>
       {data.allContentfulBlog.edges.map(edge => {
         return (
           <li>
@@ -50,7 +49,7 @@ const ListTemplate = () => {
           </li>
         )
       })}
-    </Background>
+    </Layout>
   )
 
 }
