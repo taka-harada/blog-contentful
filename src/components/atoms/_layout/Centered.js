@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const CreatedWrapper = styled.div`
+const CreatedWrap = styled.div`
   display: block;
 `;
 
@@ -11,9 +11,9 @@ const CenteredContainer = styled.div`
 `;
 
 const Centered = ({children}) => (
-  <CreatedWrapper>
+  <CreatedWrap>
     <CenteredContainer>{children}</CenteredContainer>
-  </CreatedWrapper>
+  </CreatedWrap>
 );
 
 export default Centered;

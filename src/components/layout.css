@@ -54,5 +54,6 @@ body {
   background-color: #fff;
   font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;
   color: #1a1a1a;
-  -webkit-text-size-adjust: none;
+  font-smoothing: antialiased;
+  text-size-adjust: 100%;
 }

@@ -1,16 +1,20 @@
 import React from "react"
 import styled from "styled-components"
 
-const ContentWrapper = styled.div`
-  position: relative;
+const ContentWrap = styled.div`
   display: block;
-  background: #fff;
-  box-shadow: 5px 5px 1px;
-  padding: 0 24px 48px;
-  min-height: 800px;
   z-index: 10;
-`;
+`
 
-const Content = ({ children }) => <ContentWrapper>{children}</ContentWrapper>;
+const ContentInner = styled.div`
+  max-width: 800px;
+  margin: 0 auto 48px;
+`
+
+const Content = ({ children }) => (
+  <ContentWrap>
+    <ContentInner>{children}</ContentInner>
+  </ContentWrap>
+);
 
 export default Content;

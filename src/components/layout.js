@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Background from "./atoms/_layout/Background"
+import Content from "./atoms/_layout/Content"
 import Centered from "./atoms/_layout/Centered"
 import Header from "./molecules/Header"
 import "./layout.css"
@@ -28,8 +29,7 @@ const Layout = ({ children }) => {
   return (
     <Background>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Centered />
-      {children}
+      <Content>{children}</Content>
     </Background>
   )
 }
