@@ -32,8 +32,17 @@ export default NavMenu;
 
 const NavWrap = styled.ul`
   display: flex;
+  margin: 0;
+  padding: 0;
   li{
     display: list-item;
-    padding-left: 45px;
+    margin: 0;
+    // 擬似要素
+    :not(:first-child){
+      padding-left: 45px;
+    }
+    a {
+      color: #fff;
+    }
   }
 `

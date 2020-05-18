@@ -4,30 +4,7 @@ import styled from "styled-components"
 
 import HeadTitle from "../atoms/HeadTitle"
 import NavMenu from "../atoms/NavMenu"
-
-const HeaderWrap = styled.div`
-  background-color: #000;
-  width: 100%;
-  min-width: 1260px;
-  min-height: 80px;
-`
-
-const HeaderInner = styled.div`
-  padding: 0 20px;
-`
-
-const HeaderLogo = styled.div`
-  padding: 25px 0 25px;
-`
-
-const HeaderNav = styled.nav`
-  display: block;
-`
-
-const LinkContainer = styled(Link)`
-  color: #fff;
-  text-decoration: none;
-`
+import HeadSearch from "../atoms/HeadSearch"
 
 // const HeaderNav = () => (
 //   <ul>
@@ -44,8 +21,36 @@ const Header = ({ siteTitle }) => (
       <HeaderNav>
         <NavMenu />
       </HeaderNav>
+      <HeadSearch />
     </HeaderInner>
   </HeaderWrap>
 )
 
 export default Header;
+
+const HeaderWrap = styled.div`
+  background-color: #000;
+  //width: 100%;
+  //min-width: 1260px;
+  min-height: 80px;
+`
+
+const HeaderInner = styled.div`
+  padding: 0 20px;
+  display: flex;
+`
+
+const HeaderLogo = styled.div`
+  padding: 25px 0 25px;
+  flex: 1;
+`
+
+const HeaderNav = styled.nav`
+  padding: 25px 0 25px;
+  display: block;
+`
+
+const LinkContainer = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+`

@@ -18,8 +18,8 @@ createGlobalStyle`
 const Background = styled.div`
   position: relative;
   display: block;
-  width: 100%;
-  min-width: 1260px;
+  //width: 100%;
+  //min-width: 1260px;
   height: auto;
   background-color: #eee;
 `
