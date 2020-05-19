@@ -4,6 +4,7 @@ import styled from "styled-components"
 const ContentWrap = styled.div`
   display: block;
   z-index: 10;
+  margin-top: 80px;
 `
 
 const ContentInner = styled.div`
