@@ -11,8 +11,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Background from "./atoms/_layout/Background"
 import Content from "./atoms/_layout/Content"
-import Centered from "./atoms/_layout/Centered"
-import Header from "./molecules/Header"
+import Header from "./organisms/Header"
+import Footer from "./organisms/Footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -30,6 +30,7 @@ const Layout = ({ children }) => {
     <Background>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Content>{children}</Content>
+      <Footer siteTitle={data.site.siteMetadata.title} />
     </Background>
   )
 }

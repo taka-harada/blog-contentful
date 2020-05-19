@@ -2,9 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import HeadTitle from "../atoms/HeadTitle"
-import NavMenu from "../atoms/NavMenu"
-import HeadSearch from "../atoms/HeadSearch"
+import NavMenu from "../molecules/NavMenu"
+import HeadSearch from "../molecules/HeadSearch"
 
 // const HeaderNav = () => (
 //   <ul>

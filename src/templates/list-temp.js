@@ -1,9 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 
-import Background from "../components/atoms/_layout/Background"
-import Header from "../components/molecules/Header"
-import Centered from "../components/atoms/_layout/Centered"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 

@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import styled from "styled-components"
 import SearchIcon from "../../images/button_search-new.svg"
-import SearchField from "./SearchField"
+import SearchField from "../atoms/SearchField"
 
 let text = localStorage.getItem("text") || "";
 
@@ -15,7 +15,7 @@ const HeadSearch = () => {
   return (
     <SearchWrap>
       <SearchBtn>
-        <a href="#searchbox" onClick={() => setFlag(!flag)}>
+        <a href="#searchbox" onClick={() => setFlag(!flag)}>          
           <img src={SearchIcon} alt="サーチアイコン" />
         </a>      
       </SearchBtn>
@@ -29,6 +29,19 @@ const HeadSearch = () => {
 }
 
 export default HeadSearch;
+
+// const SearchIcon = styled.img`
+//   display: inline-block;
+//   overflow: hidden;
+//   width: 20px;
+//   height: 20px;
+//   position: relative;
+//   :before {
+//     content: "Noted on";
+//     background: url(../../images/button_search-new.svg) no-repeat 0 0;
+//     background-size: 20px 20px;  
+//   }
+// `
 
 const SearchWrap = styled.div`
   position: relative;
