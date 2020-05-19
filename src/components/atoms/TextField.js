@@ -14,7 +14,8 @@ const TextField = ({ type, error, value, placeholder, onChange }) => (
 
 export default TextField;
 
-const Input = styled.input.attrs({ type: "text" })`
+// const Input = styled.input.attrs({ type: "text" })`
+const Input = styled.input`
   width: 96%;
   font-size: 16px;
   line-height: 28px;

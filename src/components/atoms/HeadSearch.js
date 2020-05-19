@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import styled from "styled-components"
 import SearchIcon from "../../images/button_search-new.svg"
 import SearchField from "./SearchField"
@@ -6,14 +6,20 @@ import SearchField from "./SearchField"
 let text = localStorage.getItem("text") || "";
 
 const HeadSearch = () => {
+  const [flag, setFlag] = useState(true);
+
+  // const openModal = () => {
+  //   setFlag(!flag)
+  // }
+
   return (
     <SearchWrap>
       <SearchBtn>
-        <a href="#searchbox">
+        <a href="#searchbox" onClick={() => setFlag(!flag)}>
           <img src={SearchIcon} alt="サーチアイコン" />
         </a>      
       </SearchBtn>
-      <SearchFormWrap>
+      <SearchFormWrap flag={flag} >
         <SearchForm>
           <SearchField type="search" text={text} placeholder="キーワードで記事を検索する" />
         </SearchForm>
@@ -41,7 +47,7 @@ const SearchBtn = styled.nav`
 `
 
 const SearchFormWrap = styled.div`
-  display: none;
+  // display: ${props => props.show ? "block" : "none"};
   background-color: #000;
   position: fixed;
   top: 80px;
@@ -49,6 +55,7 @@ const SearchFormWrap = styled.div`
   right: 0;
   bottom: 0;
   z-index: 1;
+  ${({ flag }) => flag && `display: none;`}
 `
 
 const SearchForm =  styled.div`
