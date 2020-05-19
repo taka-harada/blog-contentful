@@ -33,6 +33,11 @@ const HeaderWrap = styled.div`
   //width: 100%;
   //min-width: 1260px;
   min-height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 `
 
 const HeaderInner = styled.div`
