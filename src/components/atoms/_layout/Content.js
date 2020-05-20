@@ -2,14 +2,12 @@ import React from "react"
 import styled from "styled-components"
 
 const ContentWrap = styled.div`
-  display: block;
-  z-index: 10;
-  margin-top: 80px;
+  max-width: 1080px;
+  margin: 0 auto;
 `
 
 const ContentInner = styled.div`
-  max-width: 800px;
-  margin: 0 auto 48px;
+  margin: 80px auto 0;
 `
 
 const Content = ({ children }) => (
