@@ -52,7 +52,7 @@ html,
 body {
   height: 100%;
   background-color: #fff;
-  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;
+  font-family: Avenir ,'Helvetica Neue', Helvetica, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;
   color: #1a1a1a;
   font-smoothing: antialiased;
   text-size-adjust: 100%;
