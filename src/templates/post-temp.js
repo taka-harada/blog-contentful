@@ -27,9 +27,10 @@ const ArticleHeroInner = styled.div`
     margin-bottom: 25px;
   }
   .date {
+    font-family: Poppins, sans-serif;
     font-size: 16px;
     line-height: 22px;
-    font-weight: bold;
+    font-weight: 400;
     color: #666;
     margin-bottom: 14px;
   }
