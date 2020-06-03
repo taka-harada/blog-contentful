@@ -5,12 +5,14 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import "./post.scss"
+
 const ArticleWrap = styled.div`
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 40px 80px;
   max-width: 720px;
   overflow: hidden;
-  background-color: #e3e3;
+  background-color: #e3e8;
 `
 
 const ArticleHero = styled.div`
@@ -19,47 +21,63 @@ const ArticleHero = styled.div`
 `
 
 const ArticleHeroInner = styled.div`
-  padding: 35px 30px 25px;
+  padding: 15px 30px;
   h1 {
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
   .date {
     font-family: Poppins, sans-serif;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 20px;
     font-weight: 400;
     color: #666;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
   .tags {
     display: flex;
     flex-wrap: wrap;
     flex-basis: 100%;
-    margin: 7px 0 0;
     a {
-      margin: 7px 10px 0 0;
+      margin: 0 10px 0 0;
       display: inline-block;
-      padding: 4px 12px 3px;
-      font-size: 12px;
-      line-height: 12px;
-      font-weight: bold;
-      color: #b0b0b0;
-      border-radius: 20px;
-      border: 1px solid #b0b0b0;
+      padding: 3px 12px 3px;
+      font-size: 11px;
+      line-height: 14px;
+      font-weight: 400;
+      color: #9096a2;
+      border-radius: 10px;
+      background-color: #e8ecee;
+      // border: 1px solid #b0b0b0;
+      transition: all 0.3s ease 0s;
       :hover {
-        color: #828282;
-        border: 1px solid #828282;
+        // color: #828282;
+        // border: 1px solid #828282;
+        background-color: #dadfe3;
       }
     }
   }
 `
 
 const ArticleContent = styled.div`
+  margin-top: 20px;
+  margin-bottom: 80px;
+`
+const FeaturedImage = styled.div`
+  margin: 20px 0;
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    text-align: center;
+  }
+`
+
+const ArticleBody = styled.article`
   margin-top: 60px;
-  margin-bottom: 120px;
 `
 
 const BlogPost = ({ data }) => {
@@ -71,21 +89,23 @@ const BlogPost = ({ data }) => {
       <ArticleWrap>
         <ArticleHero>
           <ArticleHeroInner>
-            <h1>{title}</h1>
             <p className="date">{publishDate}</p>
+            <h1>{title}</h1>
             <div className="tags">
               {tags.map(tag => (
                 <Link to={tag} key={tag}>{tag}</Link>
               ))}
             </div>
-            <img src={featureImage.resize.src} alt={featureImage.title}/>
           </ArticleHeroInner>
         </ArticleHero>
         <ArticleContent>
-          <div className="blogpost">
+          <FeaturedImage>
+            <img src={featureImage.resize.src} alt={featureImage.title}/>
+          </FeaturedImage>
+          <ArticleBody>
             <div dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.html }}></div>
             <Link to="/">Back to Home</Link>
-          </div>
+          </ArticleBody>
         </ArticleContent>
       </ArticleWrap>
     </Layout>
