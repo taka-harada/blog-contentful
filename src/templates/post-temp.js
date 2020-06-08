@@ -1,5 +1,7 @@
-import React from "react";
+import React , { useEffect } from "react";
 import { graphql, Link } from "gatsby";
+import Prism from 'prismjs'
+import "prismjs/themes/prism-tomorrow.css"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
