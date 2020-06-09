@@ -31,17 +31,19 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-prismjs-title`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: "language-",
               inlineCodeMarker: null,
-              aliases: {},
+              aliases: {
+                js: 'javascript',
+              },
               showLineNumbers: false,
               noInlineHighlight: false,
             },
           },
-          `gatsby-remark-code-titles`,
         ],
       },
     },

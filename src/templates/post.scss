@@ -179,4 +179,43 @@ article {
       max-width: 600px;
     }
   }
+
+  .gatsby-highlight {
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 20px;
+  }
+
+  pre[class*='language-'] {
+    display: block;
+    margin: 0 0 20px;
+    padding-right: 1rem;
+    padding-left: 2rem;
+    border-radius: 0 4px 4px 4px;
+  }
+
+  .gatsby-code-title {
+    display: block;
+    position: relative;
+    background: #272822;
+    width: 100%;
+    height: 18px;
+    top: 10px;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+  }
+  
+  .gatsby-code-title span {
+    display: inline;
+    position: relative;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    color: #eee;
+    background: #777;
+    border-top-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    padding: 3px;
+    top: -5px;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
