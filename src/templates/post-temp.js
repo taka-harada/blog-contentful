@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import "./post.scss"
+import { mediaQueries } from "../components/mediaQueries"
 
 const ArticleWrap = styled.div`
   margin: 0 auto;
@@ -13,6 +14,9 @@ const ArticleWrap = styled.div`
   max-width: 720px;
   overflow: hidden;
   background-color: #e3e8;
+  ${mediaQueries("md")`
+    padding: 16px 16px 32px;
+  `}
 `
 
 const ArticleHero = styled.div`
@@ -30,7 +34,7 @@ const ArticleHeroInner = styled.div`
   }
   .date {
     font-family: Poppins, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 20px;
     font-weight: 400;
     color: #666;
@@ -43,12 +47,12 @@ const ArticleHeroInner = styled.div`
     a {
       margin: 0 10px 0 0;
       display: inline-block;
-      padding: 3px 12px 3px;
-      font-size: 11px;
+      padding: 4px 12px 4px;
+      font-size: 12px;
       line-height: 14px;
       font-weight: 400;
       color: #9096a2;
-      border-radius: 10px;
+      border-radius: 12px;
       background-color: #e8ecee;
       // border: 1px solid #b0b0b0;
       transition: all 0.3s ease 0s;
@@ -59,11 +63,23 @@ const ArticleHeroInner = styled.div`
       }
     }
   }
+  ${mediaQueries("md")`
+    padding: 10px;
+    h1 {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
+  `}
 `
 
 const ArticleContent = styled.div`
   margin-top: 20px;
   margin-bottom: 80px;
+  ${mediaQueries("md")`
+    margin-top: 18px;
+    margin-bottom: 40px;
+  `}
 `
 const FeaturedImage = styled.div`
   margin: 20px 0;
@@ -78,6 +94,9 @@ const FeaturedImage = styled.div`
 
 const ArticleBody = styled.article`
   margin-top: 60px;
+  ${mediaQueries("md")`
+    margin-top: 30px;
+  `}
 `
 
 const BlogPost = ({ data }) => {
